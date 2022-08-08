@@ -9,8 +9,8 @@ app.use(express.static('public'));
 app.use("/public", express.static('public'));
 
 app.get('/', (req, res) => {
-  //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-  res.sendFile('C:/Users/Денис/projects/edenory/index.html')
+  app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+  res.sendFile('/home/runner/edenory/index.html')
 })
 app.post('/', (req, res) => {
     console.log(req.query.mes);
