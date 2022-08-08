@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #282a36;
+    scroll-behavior: smooth;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('sunset.png');
+}
+.main {
+    margin: 200px 0px 0px 70px;
+}
+.header {
+    color: #f4f4f4;
+}
+.header-h {
+    font-size: 60px;
+}
+.header-uh {
+    margin-top: 10px;
+    font-size: 30px;
+}
+.more-btn {
+    width: 250px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-size: 25px;
+    border-radius: 10px 20px 10px 20px;
+    margin-top: 50px;
+    transition: 1s;
+}
+.more-btn:hover {
+    transition: 1s;
+    border-radius: 20px 10px 20px 10px;
+}
+
+/* content */
+
+.about {
+    position: absolute;
+    top: 1050px;
+    background-color: #f4f4f4;
+    padding: 40px;
+    width: 450px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0px 0px 0px -50px;
+}
+
+.about-h {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.about-a {
+    font-size: 20px;
+}
+
+.request {
+    position: absolute;
+    top: 1600px;
+    width: 500px;
+    height: 500px;
+    background-color: #f4f4f4;
+}
