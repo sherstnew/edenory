@@ -70,8 +70,8 @@ a {
 }
 
 .request {
-    position: absolute;
-    top: 1600px;
+    position: relative;
+    top: 800px;
     width: 500px;
     height: 500px;
     background-color: #f4f4f4;

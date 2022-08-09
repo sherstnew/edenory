@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.sendFile('/home/runner/edenory/index.html')
 })
 app.post('/', (req, res) => {
-    console.log(req.query.mes);
+    console.log(req);
     res.send('ok')
 })
 
