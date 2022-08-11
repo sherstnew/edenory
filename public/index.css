@@ -9,7 +9,6 @@
 body {
     font-family: 'namu', sans-serif;
     background-color: #282a36;
-    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 a {
