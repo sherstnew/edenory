@@ -17,7 +17,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
   app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-  res.sendFile('C:/Users/Денис/projects/edenory/src/index.html')
+  res.sendFile('/home/runner/edenory/src/index.html')
 })
 
 app.get('/list', (req, res) => {
@@ -31,7 +31,7 @@ app.get('/list', (req, res) => {
   });
 })
 
-app.post('/api', (req, res) => {
+app.post('/api/vk', (req, res) => {
   vk = req.body.vk
   c++
   db.set(c, vk).then(() => {

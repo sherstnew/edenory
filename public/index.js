@@ -54,7 +54,7 @@ req_conf.addEventListener('click', () => {
         }
         body.vk = vk.value
         body = JSON.stringify(body)
-        xhr.open('POST', '/api', true)
+        xhr.open('POST', '/api/vk', true)
         xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.send(body)
         window.scroll(0, 0)
