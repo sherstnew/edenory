@@ -17,7 +17,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
   app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-  res.sendFile('/home/runner/edenory/index.html')
+  res.sendFile('C:/Users/Денис/projects/edenory/src/index.html')
 })
 
 app.get('/list', (req, res) => {

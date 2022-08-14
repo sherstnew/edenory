@@ -3,11 +3,35 @@ const req_btn = document.querySelector('.req-btn')
 const vk = document.querySelector('.req-vk')
 const req_conf = document.querySelector('.req-conf')
 const req_err = document.querySelector('.req-err')
+const menuicon = document.querySelector('.menuicon')
+const menu = document.querySelector('.menu-container')
+
+const width = window.screen.width
+let scrollmob = 0
+
+if (width < 500) {
+    scrollmob = window.screen.height
+    vk.placeholder = 'Ваша страница ВК'
+    req_btn.remove()
+    menuicon.addEventListener('click', () => {
+        menuicon.classList.add('menuon')
+        menu.style.opacity = 1
+    })
+    document.addEventListener('click', event => {
+    let isClickInsideElement = menuicon.contains(event.target);
+    if (!isClickInsideElement) {
+        menuicon.classList.remove('menuon')
+        menu.style.opacity = 0
+    }
+    })
+}
 
 more_btn.addEventListener('click', () => {
     const scr = setInterval(()=>{
         window.scrollBy(0, 10)
-        if (scrollY > 1000) {
+        if (scrollY > 1000 && width > 500) {
+            clearInterval(scr)
+        } else if (scrollY > scrollmob && width <= 500) {
             clearInterval(scr)
         }
     }, 1)
@@ -16,7 +40,7 @@ more_btn.addEventListener('click', () => {
 req_btn.addEventListener('click', () => {
     const scr = setInterval(()=>{
         window.scrollBy(0, 10)
-        if (scrollY > 2100) {
+        if (scrollY > 2030) {
             clearInterval(scr)
         }
     }, 1)
@@ -38,4 +62,13 @@ req_conf.addEventListener('click', () => {
     } else {
         req_err.innerHTML = 'Некорректно введена ссылка'
     }
+})
+
+menuicon.addEventListener('mouseover', () => {
+    menuicon.classList.add('menuon')
+    menu.style.opacity = 1
+})
+menu.addEventListener('mouseleave', () => {
+    menuicon.classList.remove('menuon')
+    menu.style.opacity = 0
 })
